@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="home.skwmium.skilltest.utils.Utils"/>
+
+        <variable
+            name="character"
+            type="home.skwmium.skilltest.model.dto.Character"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_normal_16">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/size_normal_36"
+            android:layout_height="@dimen/size_normal_36"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@{Utils.getHouseIconByCharacter(character)}"
+            app:circular="true"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal_16"
+            android:layout_toRightOf="@id/image"
+            android:text="@{character.name}"
+            android:textSize="@dimen/font_large_18"/>
+
+        <TextView
+            android:id="@+id/descr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginLeft="@dimen/spacing_normal_16"
+            android:layout_toRightOf="@id/image"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@{Utils.realmStringsToString(character.aliases)}"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/font_normal_15"/>
+    </RelativeLayout>
+</layout>

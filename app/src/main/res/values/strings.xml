@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sergei Kuprin</string>
+
+    <!--titles-->
+    <string name="title_starks">Starks</string>
+    <string name="title_lannisters">Lannisters</string>
+    <string name="title_targariens">Targariens</string>
+
+    <!--splash-->
+    <string name="splash_action_try_again">Try again</string>
+
+    <!--character-->
+    <string name="character_words">Words</string>
+    <string name="character_born">Born</string>
+    <string name="character_died">Died</string>
+    <string name="character_titles">Titles</string>
+    <string name="character_aliases">Aliases</string>
+    <string name="character_father">Father</string>
+    <string name="character_mother">Mother</string>
+    <string name="character_message_died_in">This person died in %1$s season</string>
+    <string name="character_message_died">This person died, but there isn\'t information about season</string>
+    <!--messages-->
+    <string name="error_loading_data">Loading data error, try again later!</string>
+
+</resources>
